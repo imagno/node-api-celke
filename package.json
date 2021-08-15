@@ -1,0 +1,15 @@
+{
+  "name": "api-celke",
+  "version": "1.0.0",
+  "description": "https://www.youtube.com/watch?v=BkJUFRrBrhY&list=PLmY5AEiqDWwCKDRrfuPLNb1-xka6LcVDt&index=1&t=1s",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
