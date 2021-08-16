@@ -13,3 +13,5 @@ const Artigo = new mongoose.Schema({
 {
   timestamps: true
 });
+
+mongoose.model('artigo', Artigo);
