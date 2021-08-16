@@ -21,7 +21,18 @@ app.get("/", (req, res) => {
 });
 
 app.post("/artigo", (req, res) => {
-  return res.json(req.body);
+  const artigo = Artigo.create(req.body, (err) => {
+    if(err) return res.status(400).json({
+      error: true,
+      message: "Erro: Artigo não foi cadastrado"
+    });
+
+    return res.status(200).json({
+      error: false,
+      message: "Artigo cadastrado com sucesso!"
+    });
+
+  });
 });
 
 app.listen(3500, () => {
