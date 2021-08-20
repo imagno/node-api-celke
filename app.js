@@ -67,6 +67,20 @@ app.put("/artigo/:id", (req, res) => {
   });
 });
 
+app.delete("/artigo/:id", (req, res) => {
+  const artigo = Artigo.deleteOne({_id: req.params.id}, (err) => {
+    if(err) return res.status(400).json({
+      error: true,
+      message: "Error: Artigo NÂO foi apagado com sucesso. :("
+    });
+
+    return res.json({
+      error: false,
+      message: "Artigo apagado com sucesso!!!"
+    });
+  });
+});
+
 app.listen(3500, () => {
   console.log("Servidor iniciado na porta 3500: http://localhost:3500");
 });
