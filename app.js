@@ -53,6 +53,20 @@ app.post("/artigo", (req, res) => {
   });
 });
 
+app.put("/artigo/:id", (req, res) => {
+  const artigo = Artigo.updateOne({_id: req.params.id}, req.body, (err) => {
+    if(err) return res.status(400).json({
+      error: true,
+      message: "Artigo não foi editado com sucesso. :("
+    });
+
+    return res.json({
+      error: false,
+      message: "Artigo editado com sucesso! ;D"
+    });
+  });
+});
+
 app.listen(3500, () => {
   console.log("Servidor iniciado na porta 3500: http://localhost:3500");
 });
