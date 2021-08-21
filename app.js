@@ -1,11 +1,18 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const cors = require('cors');
 
 require('./models/Artigo');
 const Artigo = mongoose.model('artigo');
 
 const app = express();
 app.use(express.json());
+
+app.use((req, res, next) => {
+  app.use(cors());
+
+  next();
+});
 
 mongoose.connect('mongodb://localhost/imagno', {
   useNewUrlParser: true,
