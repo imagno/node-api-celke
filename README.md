@@ -1,6 +1,6 @@
 # API Node.Js
 
-Projeto Restfull simples seguindo tutorial do Canal 
+Projeto Restful simples seguindo tutorial do Canal 
 [Celke](https://www.youtube.com/playlist?list=PLmY5AEiqDWwCKDRrfuPLNb1-xka6LcVDt)
 no YouTube.
 
